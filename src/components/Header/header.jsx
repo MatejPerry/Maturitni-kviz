@@ -3,7 +3,7 @@ import "../../css/style.css"
 
 export default function Header() {
   return (
-    <header className="home-header">
+    <header className="header-menu">
       <h2 className="home-logo">Maturitní kvíz</h2>
 
       <nav>
