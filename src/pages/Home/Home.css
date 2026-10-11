@@ -1,0 +1,182 @@
+/* Hlavní stránka */
+
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+
+/* Horní navigace */
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-logo {
+  margin: 0;
+  font-size: 24px;
+}
+
+.home-header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.home-header nav a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.home-header nav a:hover {
+  color: var(--primary);
+}
+
+
+/* Úvodní část */
+
+.home-hero {
+  padding: 90px 0 100px;
+}
+
+.home-label {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.home-hero h1 {
+  max-width: 750px;
+  margin: 20px 0;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.15;
+}
+
+.home-hero h1 span {
+  color: var(--primary);
+}
+
+.home-description {
+  max-width: 600px;
+  margin-bottom: 35px;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* Hlavní tlačítko */
+
+.home-button {
+  display: inline-block;
+  padding: 15px 24px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.home-button:hover {
+  background-color: #8797ff;
+  transform: translateY(-2px);
+}
+
+
+/* Nabídka funkcí */
+
+.home-options {
+  padding-bottom: 80px;
+}
+
+.home-options > h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--surface);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.home-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.home-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.home-card p {
+  flex-grow: 1;
+  margin: 0 0 25px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.home-card span {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+
+/* Spodní část */
+
+.home-footer {
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+
+/* Menší obrazovky */
+
+@media (max-width: 900px) {
+  .home-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    padding: 0 18px;
+  }
+
+  .home-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .home-header nav {
+    gap: 20px;
+  }
+
+  .home-hero {
+    padding: 60px 0 70px;
+  }
+
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+}
