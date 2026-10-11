@@ -20,6 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background);
+  border: 2px solid red;
 }
 
 a {
@@ -34,21 +35,26 @@ input {
 
 /* Hlavní stránka */
 
-.home {
-  max-width: 1200px;
+.home, .about {
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 30px;
+  /* border: 2px solid red; */
 }
 
 
 /* Horní navigace */
 
 .home-header {
+  background-color: var(--surface);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0;
+  padding: 25px;
   border-bottom: 1px solid var(--border);
+  margin-top: 25px;
+  /* border: 2px solid red; */
+  border-radius: 10px;
 }
 
 .home-logo {
@@ -70,11 +76,19 @@ input {
   color: var(--primary);
 }
 
+.header-link{
+  border: 2px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--border);
+}
+
 
 /* Úvodní část */
 
 .home-hero {
   padding: 90px 0 100px;
+  /* border: 2px solid red; */
 }
 
 .home-label {

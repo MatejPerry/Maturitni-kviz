@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Header from "../../components/Header/header";
+import Footer from "../../components/Footer/footer";
 
 function Home() {
   return (
     <>
       <div className="home">
-        
+
         <Header />
 
         <main>
@@ -50,19 +51,22 @@ function Home() {
                 <span>Prohlédnout →</span>
               </a>
 
-              <a href="/about" className="home-card">
+              <Link to="/about" className="home-card">
                 <h3>O projektu</h3>
                 <p>Zjistěte více o maturitním kvízu.</p>
                 <span>Více informací →</span>
-              </a>
+              </Link>
+              {/* <a href="/about" className="home-card">
+                <h3>O projektu</h3>
+                <p>Zjistěte více o maturitním kvízu.</p>
+                <span>Více informací →</span>
+              </a> */}
 
             </div>
           </section>
         </main>
 
-        <footer className="home-footer">
-          Maturitní kvíz © 2026
-        </footer>
+        <Footer />
 
       </div>
     </>

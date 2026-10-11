@@ -1,7 +1,11 @@
 import React from 'react'
 
 export default function footer() {
-  return (
-    <div>footer</div>
-  )
+    return (
+        <>
+            <footer className="home-footer">
+                Maturitní kvíz © 2026
+            </footer>
+        </>
+    )
 }

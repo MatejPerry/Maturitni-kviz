@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../../css/style.css"
 
 export default function Header() {
   return (
@@ -6,8 +7,8 @@ export default function Header() {
       <h2 className="home-logo">Maturitní kvíz</h2>
 
       <nav>
-        <Link to="/">Domů</Link>
-        <Link to="/about">O projektu</Link>
+        <Link to="/" className="header-link">Domů</Link>
+        <Link to="/about" className="header-link">O projektu</Link>
       </nav>
     </header>
   );
