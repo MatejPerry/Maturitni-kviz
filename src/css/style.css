@@ -1,14 +1,22 @@
 :root {
   font-family: Arial, sans-serif;
-  color: #f4f5fa;
-  background-color: #0c0f17;
+  color: #edf0ff;
+  background-color: #0b1020;
 
-  --background: #0c0f17;
-  --surface: #171c29;
-  --border: #292f40;
-  --text: #f4f5fa;
-  --text-muted: #a6afc2;
-  --primary: #7185ff;
+  --background: #0b1020;
+  --surface: #131b30;
+  --surface-hover: #1b2742;
+  --border: #293653;
+
+  --text: #edf0ff;
+  --text-muted: #a6b0ca;
+
+  --primary: #8b9cff;
+  --primary-hover: #a5b2ff;
+  --primary-dark: #111831;
+
+  --header: #10182b;
+  --card: #10182b;
 }
 
 * {
@@ -19,8 +27,12 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--background);
-  /* border: 2px solid red; */
+  background:
+    radial-gradient(
+      ellipse at top,
+      #172342 0%,
+      var(--background) 55%
+    );
 }
 
 a {
@@ -35,81 +47,92 @@ input {
 
 /* Hlavní stránka */
 
-.home, .about {
+.home,
+.about {
   max-width: 90%;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 0 30px;
+  margin: 30px auto 0;
+  padding: 15px 30px 0;
   background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  /* border: 2px solid red; */
-  padding-top: 15px;
+  box-shadow: 0 15px 45px #00000020;
 }
-
 
 /* Horní navigace */
 
 .header-menu {
-  background-color: var(--border);
+  background-color: var(--header);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px;
-  border-bottom: 1px solid var(--border);
-  margin-top: 25px;
-  /* border: 2px solid red; */
-  border-radius: 10px;
+  padding: 22px 25px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .home-logo {
   margin: 0;
   font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #f4f5ff;
 }
 
-.home-header nav {
+.header-menu nav {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 12px;
 }
 
-.home-header nav a {
+.header-menu nav a {
   color: var(--text-muted);
-  transition: color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
-.home-header nav a:hover {
-  color: var(--primary);
+.header-menu nav a:hover {
+  color: var(--text);
 }
 
-.header-link{
-  margin: 5px;
-  border: 2px solid var(--primary);
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: var(--border);
+.header-link {
+  margin: 0;
+  border: 1px solid blue;
+  padding: 9px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .header-link:hover {
-  background-color: var(--primary);
-  color: var(--text);
-  transition: background-color 0.2s, color 0.2s;
+  background-color: #8b9cff18;
+  /* border-color: #8b9cff50; */
+  border-color: var(--primary);
+  color: var(--primary-hover);
 }
-
 
 /* Úvodní část */
 
 .home-hero {
   padding: 90px 0 100px;
   margin: 50px;
-  /* background-color: var(--border); */
-  /* border-radius: 20px; */
-  /* border: 2px solid red; */
 }
 
 .home-label {
+  display: inline-block;
   color: var(--primary);
-  font-size: 13px;
+  background-color: #8b9cff12;
+  border: 1px solid #8b9cff30;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }
 
 .home-hero h1 {
@@ -117,6 +140,8 @@ input {
   margin: 20px 0;
   font-size: clamp(36px, 5vw, 60px);
   line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: #f4f5ff;
 }
 
 .home-hero h1 span {
@@ -131,24 +156,35 @@ input {
   line-height: 1.7;
 }
 
-
 /* Hlavní tlačítko */
 
 .home-button {
   display: inline-block;
   padding: 15px 24px;
-  border-radius: 8px;
-  background-color: var(--primary);
-  color: white;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #a4aaff
+  );
+  color: var(--primary-dark);
   font-weight: bold;
-  transition: background-color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .home-button:hover {
-  background-color: #8797ff;
+  background: linear-gradient(
+    135deg,
+    var(--primary-hover),
+    #bdc3ff
+  );
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px #8b9cff30;
 }
-
 
 /* Nabídka funkcí */
 
@@ -159,6 +195,8 @@ input {
 .home-options > h2 {
   margin-bottom: 25px;
   font-size: 28px;
+  letter-spacing: -0.5px;
+  color: #f0f2ff;
 }
 
 .home-cards {
@@ -173,19 +211,26 @@ input {
   align-items: flex-start;
   padding: 25px;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background-color: var(--surface);
-  transition: border-color 0.2s, transform 0.2s;
+  border-radius: 13px;
+  background-color: var(--card);
+  transition:
+    border-color 0.2s,
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .home-card:hover {
-  border-color: var(--primary);
+  border-color: #7186e8;
+  background-color: var(--surface-hover);
   transform: translateY(-4px);
+  box-shadow: 0 10px 25px #00000020;
 }
 
 .home-card h3 {
   margin: 0 0 12px;
   font-size: 20px;
+  color: #f0f2ff;
 }
 
 .home-card p {
@@ -198,48 +243,76 @@ input {
 .home-card span {
   color: var(--primary);
   font-weight: bold;
+  transition: color 0.2s;
 }
 
+.home-card:hover span {
+  color: var(--primary-hover);
+}
 
 /* Spodní část */
 
 .home-footer {
   padding: 25px 0;
-  border-top: 2px solid var(--border);
+  border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 14px;
 }
 
-
 /* Menší obrazovky */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .home-cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .home-hero {
+    margin: 35px 20px;
+  }
 }
 
-@media (max-width: 500px) {
-  .home {
-    padding: 0 18px;
-    /* border: 2px solid red; */
+@media (max-width: 650px) {
+  .home,
+  .about {
+    max-width: 95%;
+    padding: 12px 18px 0;
+    margin-top: 15px;
   }
 
-  .home-header {
+  .header-menu {
     align-items: flex-start;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
+    padding: 18px;
   }
 
-  .home-header nav {
-    gap: 20px;
+  .header-menu nav {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-link {
+    padding: 8px 11px;
   }
 
   .home-hero {
-    padding: 60px 0 70px;
+    padding: 45px 0 55px;
+    margin: 20px 0;
+  }
+
+  .home-hero h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .home-description {
+    font-size: 16px;
   }
 
   .home-cards {
     grid-template-columns: 1fr;
+  }
+
+  .home-options {
+    padding-bottom: 45px;
   }
 }
