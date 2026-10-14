@@ -20,7 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--background);
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 a {
@@ -88,11 +88,20 @@ input {
   background-color: var(--border);
 }
 
+.header-link:hover {
+  background-color: var(--primary);
+  color: var(--text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
 
 /* Úvodní část */
 
 .home-hero {
   padding: 90px 0 100px;
+  margin: 50px;
+  /* background-color: var(--border); */
+  /* border-radius: 20px; */
   /* border: 2px solid red; */
 }
 
@@ -196,7 +205,7 @@ input {
 
 .home-footer {
   padding: 25px 0;
-  border-top: 1px solid var(--border);
+  border-top: 2px solid var(--border);
   color: var(--text-muted);
   font-size: 14px;
 }
@@ -213,6 +222,7 @@ input {
 @media (max-width: 500px) {
   .home {
     padding: 0 18px;
+    /* border: 2px solid red; */
   }
 
   .home-header {
