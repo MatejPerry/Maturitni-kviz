@@ -2,25 +2,26 @@
   font-family: Arial, sans-serif;
   color: #edf0ff;
   background-color: #0b1020;
-
+  
   --background: #0b1020;
   --surface: #131b30;
   --surface-hover: #1b2742;
   --border: #293653;
-
+  
   --text: #edf0ff;
   --text-muted: #a6b0ca;
-
+  
   --primary: #8b9cff;
   --primary-hover: #a5b2ff;
   --primary-dark: #111831;
-
+  
   --header: #10182b;
   --card: #10182b;
 }
 
 * {
   box-sizing: border-box;
+  /* border: 2px solid red; */
 }
 
 body {

@@ -1,6 +1,12 @@
-Maturitní kvíz na k předmětu Počítačové sítě
+# Maturitní kvíz na k předmětu Počítačové sítě
 
-by
+Pro spuštění:
+1. Instalace Git
+2. Klonování celého repozitáře na lokální PC
+3. Otevření adresáře ve Visual Studio Code
+4. Terminál -> Gitbash
+5. Do Gitbash zadat "npm i"
+6. Po dokončení procesu "npm run dev"
 
 # React + Vite
 
