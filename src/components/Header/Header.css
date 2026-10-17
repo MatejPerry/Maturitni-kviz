@@ -1,0 +1,71 @@
+
+/* Základní hlavička */
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-menu nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Hamburger je na počítači skrytý */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  border-radius: 3px;
+  background-color: var(--text);
+}
+
+/* Mobilní menu */
+@media (max-width: 900px) {
+  .header-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-menu .home-logo {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-menu nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .header-menu nav.nav-open {
+    display: flex;
+  }
+
+  .header-menu nav .header-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

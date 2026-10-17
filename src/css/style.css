@@ -54,7 +54,9 @@ input {
 
 .home,
 .about,
-.quiz {
+.quiz,
+.history,
+.results {
   max-width: 90%;
   margin: 30px auto 0;
   padding: 15px 30px 0;
@@ -63,6 +65,7 @@ input {
   border-radius: 20px;
   box-shadow: 0 0px 45px var(--primary);
   margin-bottom: 50px;
+  margin-top: 60px;
   /* border: 1px solid var(--my-color); */
   /* border: 2px solid red; */
 }
@@ -143,6 +146,7 @@ input {
   max-width: 50%;
   margin-right: 50px;
   padding: 20px;
+  border-radius: 15px;
   /* border: 2px solid red; */
 }
 
@@ -336,6 +340,20 @@ input {
   .home-hero {
     padding: 45px 0 55px;
     margin: 20px 0;
+    display: block;
+  }
+
+  .home-hero-left {
+    max-width: 100%;
+    margin-right: 0;
+    padding: 0 20px;
+    padding-bottom: 30px;
+  }
+
+  .home-hero-right {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
   }
 
   .home-hero h1 {
