@@ -12,20 +12,27 @@ function Home() {
 
         <main>
           <section className="home-hero">
-            <p className="home-label">PŘÍPRAVA NA MATURITU</p>
+            <div className="home-hero-left">
+              <p className="home-label">PŘÍPRAVA NA MATURITU</p>
 
-            <h1>
-              Ověřte si, co <span>opravdu umíte.</span>
-            </h1>
+              <h1>
+                Ověřte si, co <span>opravdu umíte.</span>
+              </h1>
 
-            <p className="home-description">
-              Procvičujte si maturitní otázky, sledujte své výsledky
-              a připravte se na maturitu vlastním tempem.
-            </p>
+              <p className="home-description">
+                Procvičujte si maturitní otázky, sledujte své výsledky
+                a připravte se na maturitu vlastním tempem.
+              </p>
 
-            <a href="/quiz" className="home-button">
-              Začít procvičovat →
-            </a>
+              <a href="/quiz" className="home-button">
+                Začít procvičovat →
+              </a>
+            </div>
+
+            <div className="home-hero-right">
+              <h2>Obsah kvízu</h2>
+            </div>
+
           </section>
 
           <section className="home-options">
