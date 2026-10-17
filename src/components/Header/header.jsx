@@ -20,7 +20,8 @@ export default function Header() {
       </h2>
 
       <button
-        className="hamburger"
+        // className="hamburger"
+        className={`hamburger ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label={menuOpen ? "Zavřít menu" : "Otevřít menu"}
         aria-expanded={menuOpen}

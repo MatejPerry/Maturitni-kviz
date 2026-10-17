@@ -9,7 +9,7 @@ export default function About() {
     <>
       <div className="about">
         <Header />
-        <h1>About</h1>
+        <h1>O projektu</h1>
         {/* <Link to="/">Home</Link> */}
 
         <Footer />

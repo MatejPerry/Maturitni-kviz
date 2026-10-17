@@ -40,23 +40,23 @@ function Home() {
 
             <div className="home-cards">
 
-              <a href="/quiz" className="home-card">
+              <Link to="/quiz" className="home-card">
                 <h3>Procvičování</h3>
                 <p>Vyzkoušejte si své znalosti pomocí otázek.</p>
                 <span>Začít →</span>
-              </a>
+              </Link>
 
-              <a href="/results" className="home-card">
+              <Link to="/results" className="home-card">
                 <h3>Výsledky</h3>
                 <p>Podívejte se, jak se vám v testech daří.</p>
                 <span>Zobrazit →</span>
-              </a>
+              </Link>
 
-              <a href="/history" className="home-card">
+              <Link to="/history" className="home-card">
                 <h3>Historie</h3>
                 <p>Prohlédněte si své předchozí testy.</p>
                 <span>Prohlédnout →</span>
-              </a>
+              </Link>
 
               <Link to="/about" className="home-card">
                 <h3>O projektu</h3>

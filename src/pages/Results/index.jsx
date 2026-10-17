@@ -9,7 +9,7 @@ export default function Results() {
     <>
       <div className="results">
         <Header />
-        <h1>Results</h1>
+        <h1>Výsledky</h1>
 
         <Footer />
       </div>

@@ -83,6 +83,7 @@ input {
   margin-top: 15px;
   border: 1px solid var(--my-color);
   box-shadow: 0 10px 25px #ffffff20;
+  margin-bottom: 40px;
 }
 
 .home-logo {
@@ -130,6 +131,7 @@ input {
   /* border-color: #8b9cff50; */
   border-color: var(--primary);
   color: var(--primary-hover);
+  /* border: 2px solid red; */
 }
 
 /* Úvodní část */
@@ -160,8 +162,18 @@ input {
   /* font-weight: bold; */
   width: 50%;
   margin-left: auto;
-  box-shadow: 0 0px 20px var(--primary);
+  /* box-shadow: 0 0px 20px var(--primary); */
   /* border: 2px solid red; */
+  transition:
+  border-color 1s,
+  background-color 1s,
+  transform 1s,
+  box-shadow 1s;
+}
+
+.home-hero-right:hover {
+  box-shadow: 0 0px 20px var(--primary);
+  transition: box-shadow 0.2s;
 }
 
 .home-label {
@@ -267,6 +279,7 @@ input {
   background-color: var(--surface-hover);
   transform: translateY(-4px);
   box-shadow: 0 10px 25px #00000020;
+  /* border: 2px solid red; */
 }
 
 .home-card h3 {

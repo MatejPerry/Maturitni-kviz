@@ -9,7 +9,7 @@ export default function History() {
     <>
       <div className="history">
         <Header />
-        <h1>History</h1>
+        <h1>Historie odpovědí</h1>
 
         <Footer />
       </div>

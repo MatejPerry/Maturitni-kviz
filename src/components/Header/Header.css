@@ -1,12 +1,32 @@
 
 /* Základní hlavička */
+
 .header-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+
+  background-color: var(--header);
+  padding: 22px 25px;
+  border: 1px solid var(--my-color);
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 10px 25px #ffffff20;
+  /* border: 2px solid red; */
 }
+
+.home-logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  color: #f4f5ff;
+  /* border: 2px solid red; */
+}
+
+/* Navigace na počítači */
 
 .header-menu nav {
   display: flex;
@@ -15,15 +35,64 @@
   gap: 12px;
 }
 
-/* Hamburger je na počítači skrytý */
+.header-menu nav a {
+  color: var(--text-muted);
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.header-menu nav a:hover {
+  color: var(--text);
+}
+
+.header-link {
+  margin: 0;
+  border: 1px solid var(--my-color);
+  padding: 9px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.header-link:hover {
+  background-color: #8b9cff18;
+  border-color: var(--primary);
+  color: var(--primary-hover);
+}
+
+/* Hamburger tlačítko */
+
 .hamburger {
   display: none;
-  background: transparent;
-  border: 1px solid var(--border);
+  background-color: transparent;
+  border: 1px solid var(--my-color);
   border-radius: 8px;
   padding: 9px;
   cursor: pointer;
+
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
+
+.hamburger:hover {
+  background-color: #8b9cff18;
+  border-color: var(--primary);
+  box-shadow: 0 0 12px #8b9cff30;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Tři čárky hamburgeru */
 
 .hamburger span {
   display: block;
@@ -32,9 +101,28 @@
   margin: 4px 0;
   border-radius: 3px;
   background-color: var(--text);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+/* Proměna čárek na křížek */
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* Mobilní menu */
+
 @media (max-width: 900px) {
   .header-menu {
     flex-direction: row;
@@ -49,23 +137,46 @@
 
   .hamburger {
     display: block;
+    flex-shrink: 0;
   }
 
   .header-menu nav {
-    display: none;
-    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 0;
+    width: 100%;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      visibility 0.35s;
   }
 
   .header-menu nav.nav-open {
-    display: flex;
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+    gap: 8px;
   }
 
   .header-menu nav .header-link {
     display: block;
     width: 100%;
     text-align: center;
+    flex-shrink: 0;
+  }
+}
+
+/* Velmi malé obrazovky */
+
+@media (max-width: 650px) {
+  .header-menu {
+    padding: 18px;
   }
 }
