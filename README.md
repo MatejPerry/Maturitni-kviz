@@ -61,28 +61,12 @@ Tuto adresu otevřete ve webovém prohlížeči.
 
 Pro ukončení vývojového serveru stiskněte v terminálu `Ctrl + C`.
 
-## Sestavení aplikace
-
-Pro vytvoření produkční verze aplikace spusťte:
-
-```bash
-npm run build
-```
-
-Výsledné soubory se standardně uloží do složky `dist`.
-
-Pro místní náhled produkční verze lze použít:
-
-```bash
-npm run preview
-```
-
 ## Struktura projektu
 
-Základní struktura projektu může vypadat například takto:
+Struktura projektu vypadá přibližně takto:
 
 ```text
-react_zaklad/
+maturitni-kviz/
 ├── public/
 ├── src/
 │   ├── components/
@@ -104,8 +88,6 @@ react_zaklad/
 └── README.md
 ```
 
-Jedná se o orientační strukturu. Skutečné složky a soubory se mohou podle aktuálního stavu projektu lišit.
-
 ## Princip adaptivní obtížnosti
 
 Kvíz začíná na lehké úrovni. Na základě správnosti odpovědí se obtížnost postupně zvyšuje nebo snižuje.
@@ -123,7 +105,3 @@ Konkrétní pravidla změny obtížnosti určuje implementace aplikace.
 Výsledky dokončených kvízů se ukládají do `localStorage` webového prohlížeče. Díky tomu zůstávají dostupné i po zavření nebo obnovení stránky.
 
 Data jsou uložena pouze v daném prohlížeči a automaticky se nepřenášejí na jiná zařízení.
-
-## Vývoj projektu
-
-Projekt je vytvořen jako školní práce zaměřená na procvičování maturitních otázek a využití adaptivní obtížnosti ve webové aplikaci.
