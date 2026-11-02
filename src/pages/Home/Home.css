@@ -1,0 +1,187 @@
+/* Úvodní část */
+
+.home-hero {
+  padding: 90px 0 100px;
+  margin: 50px;
+  display: flex;
+  justify-content: flex-end;
+  /* border: 2px solid red; */
+}
+
+.home-hero-left {
+  max-width: 50%;
+  margin-right: 50px;
+  padding: 20px;
+  border-radius: 15px;
+  /* border: 2px solid red; */
+}
+
+.home-hero-right {
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--my-color-2);
+  color: white;
+  font-size: auto;
+  /* font-weight: bold; */
+  width: 50%;
+  margin-left: auto;
+  /* box-shadow: 0 0px 20px var(--primary); */
+  /* border: 2px solid red; */
+  transition:
+    border-color 1s,
+    background-color 1s,
+    transform 1s,
+    box-shadow 1s;
+}
+
+.home-hero-right:hover {
+  box-shadow: 0 0px 20px var(--primary);
+  transition: box-shadow 0.2s;
+}
+
+.home-label {
+  display: inline-block;
+  color: var(--primary);
+  background-color: #8b9cff12;
+  border: 1px solid #8b9cff30;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.home-hero h1 {
+  max-width: 750px;
+  margin: 20px 0;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  color: #f4f5ff;
+}
+
+.home-hero h1 span {
+  color: var(--primary);
+}
+
+/* Hlavní tlačítko */
+
+.home-button {
+  display: inline-block;
+  padding: 15px 24px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    #a4aaff
+  );
+  color: var(--primary-dark);
+  font-weight: bold;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.home-button:hover {
+  background: linear-gradient(
+    135deg,
+    var(--primary-hover),
+    #bdc3ff
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px #8b9cff30;
+}
+
+/* Nabídka funkcí */
+
+.home-options {
+  padding-bottom: 80px;
+}
+
+.home-options > h2 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  color: #f0f2ff;
+}
+
+.home-card:hover {
+  border-color: #7186e8;
+  background-color: var(--surface-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #00000020;
+  /* border: 2px solid red; */
+}
+
+.home-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #f0f2ff;
+}
+
+.home-card p {
+  flex-grow: 1;
+  margin: 0 0 25px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.home-card span {
+  color: var(--primary);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.home-card:hover span {
+  color: var(--primary-hover);
+}
+
+/* Spodní část */
+
+.home-footer {
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Menší obrazovky */
+
+@media (max-width: 1100px) {
+  .home-hero {
+    margin: 35px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-hero {
+    padding: 45px 0 55px;
+    margin: 20px 0;
+    display: block;
+  }
+
+  .home-hero-left {
+    max-width: 100%;
+    margin-right: 0;
+    padding: 0 20px;
+    padding-bottom: 30px;
+  }
+
+  .home-hero-right {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .home-hero h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .home-options {
+    padding-bottom: 45px;
+  }
+}

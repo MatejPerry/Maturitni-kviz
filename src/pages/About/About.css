@@ -1,8 +1,86 @@
-/* .about h1{
-    color: var(--h1);
-    text-decoration: underline;
-} */
+/* Úvodní část */
 
-.about h2{
+.about-hero {
+    margin-top: 50px;
+    padding: 55px 35px;
+    margin-bottom: 35px;
+    border-radius: 15px;
+    background: linear-gradient(120deg,
+            /* #19284b, */
+            #111a32);
+    border: 1px solid var(--border);
+}
+
+.about-hero h1 {
+    margin-top: 0;
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.about-hero .home-description {
+    margin-bottom: 0;
+}
+
+/* Informační sekce */
+
+.about-section {
+    margin-bottom: 45px;
+}
+
+.about-section h2 {
     color: var(--h2);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.about-section>p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 16px;
+    max-width: 900px;
+}
+
+/* Karty funkcí */
+
+.about-section .home-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-section .home-card {
+    min-height: 145px;
+    transition:
+        transform 0.2s,
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.about-section .home-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    background-color: var(--surface-hover);
+}
+
+.about-section .home-card h3 {
+    color: var(--primary);
+}
+
+/* Technologie */
+
+.about-section:last-of-type p {
+    line-height: 2;
+}
+
+/* Mobilní zařízení */
+
+@media (max-width: 650px) {
+    .about-hero {
+        padding: 30px 20px;
+    }
+
+    .about-section .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        margin-bottom: 35px;
+    }
 }
