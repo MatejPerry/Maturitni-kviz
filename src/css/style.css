@@ -20,11 +20,19 @@
 
   --my-color: rgb(85, 85, 255);
   --my-color-2: rgba(85, 85, 255, 0.473);
+
+  --h1: #6d82fc;
+  --h2: #8692da;
 }
 
 * {
   box-sizing: border-box;
   /* border: 2px solid red; */
+}
+
+.page-title {
+  color: var(--h1);
+  text-decoration: underline;
 }
 
 body {

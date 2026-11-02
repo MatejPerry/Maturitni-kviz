@@ -9,7 +9,7 @@ export default function Quiz() {
     <>
       <div className="quiz">
         <Header />
-        <h1>Quiz</h1>
+        <h1 className="page-title">Kvíz</h1>
 
         <Footer />
       </div>
