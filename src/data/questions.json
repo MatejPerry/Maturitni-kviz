@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "question": "Co znamená zkratka HTML?",
+    "difficulty": 1,
+    "answers": [
+      "HyperText Markup Language",
+      "HighText Machine Language",
+      "HyperTool Multi Language",
+      "HomeText Markup Language"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 2,
+    "question": "Který jazyk se používá pro stylování webových stránek?",
+    "difficulty": 1,
+    "answers": [
+      "JavaScript",
+      "Python",
+      "CSS",
+      "PHP"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 3,
+    "question": "Co je React?",
+    "difficulty": 2,
+    "answers": [
+      "Databázový systém",
+      "JavaScriptová knihovna",
+      "Operační systém",
+      "Programovací jazyk"
+    ],
+    "correctAnswer": 1
+  }
+]
