@@ -1,80 +1,152 @@
 
-.quiz-content {
-    max-width: 850px;
-    margin: 50px auto;
-    padding: 35px;
+/* Úvodní obrazovka */
+
+.quiz-intro {
+    max-width: 950px;
+    margin: 45px auto 60px;
+    padding: 45px 40px;
+    text-align: center;
     background: var(--card-bg, #151d2e);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border-radius: 20px;
+    /* border: 2px solid red; */
 }
 
-.quiz-progress {
-    color: #8b9bb5;
-    font-size: 14px;
-    margin-bottom: 25px;
+/* Ikona */
+
+.quiz-intro-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(38, 116, 232, 0.15);
+    border: 1px solid rgba(38, 116, 232, 0.35);
+    border-radius: 18px;
 }
 
-.quiz-content h3 {
-    font-size: 25px;
+.quiz-intro-icon span {
+    color: #3988ff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Nadpisy a text */
+
+.quiz-intro-label {
+    color: #3988ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.quiz-intro h2 {
     color: white;
-    margin-bottom: 30px;
-    line-height: 1.4;
+    font-size: 32px;
+    margin-bottom: 18px;
 }
 
-.quiz-answers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.quiz-answers button {
-    min-height: 65px;
-    padding: 15px 20px;
-    background: #202c42;
-    color: white;
-    border: 1px solid #34445f;
-    border-radius: 10px;
+.quiz-intro-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #aab8ce;
     font-size: 16px;
-    text-align: left;
-    cursor: pointer;
+    line-height: 1.7;
+}
+
+/* Informační karty */
+
+.quiz-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 40px 0;
+}
+
+.quiz-info-card {
+    padding: 25px 18px;
+    background: #202c42;
+    border: 1px solid #34445f;
+    border-radius: 13px;
     transition: 0.2s ease;
 }
 
-.quiz-answers button:hover {
-    background: #263d60;
+.quiz-info-card:hover {
     border-color: #3985f7;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-.quiz-next {
+.quiz-info-icon {
     display: block;
-    margin: 30px 0 0 auto;
-    margin-bottom: 20px;
-    padding: 13px 28px;
+    color: #3988ff;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.quiz-info-card h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.quiz-info-card p {
+    color: #aab8ce;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Startovací tlačítko */
+
+.quiz-start {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 220px;
+    padding: 16px 28px;
     background: #2674e8;
     color: white;
     border: none;
-    border-radius: 9px;
-    font-size: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
-.quiz-next:hover {
+.quiz-start:hover {
     background: #3988ff;
+    transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-    .quiz-content {
-        margin: 25px 15px;
-        padding: 22px;
+.quiz-start span {
+    font-size: 21px;
+}
+
+/* Doplňkový text */
+
+.quiz-intro-note {
+    color: #71819b;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Responzivní zobrazení */
+
+@media (max-width: 700px) {
+    .quiz-intro {
+        margin: 25px 15px 40px;
+        padding: 30px 20px;
     }
 
-    .quiz-answers {
+    .quiz-intro h2 {
+        font-size: 25px;
+    }
+
+    .quiz-info {
         grid-template-columns: 1fr;
-    }
-
-    .quiz-content h3 {
-        font-size: 21px;
+        gap: 12px;
     }
 }
